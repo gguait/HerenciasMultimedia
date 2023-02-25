@@ -8,18 +8,21 @@ package herencias;
  *
  * @author pabmar
  */
-public class Pelicula extends Multimedia{
+public class Pelicula extends Multimedia {
     private String actorPrincipal, actrizPrincipal;
-    public Pelicula(String titulo, String autor, format formato, String duracion, String actorPrincipal, String actrizPrincipal) throws Exception{
+
+    public Pelicula(String titulo, String autor, format formato, String duracion, String actorPrincipal,
+            String actrizPrincipal) throws Exception {
         super(titulo, autor, formato, duracion);
-        
-        if (actorPrincipal == null && actrizPrincipal == null || actorPrincipal.length()==0 && actrizPrincipal.length()==0) {
+
+        if (actorPrincipal == null && actrizPrincipal == null
+                || actorPrincipal.length() == 0 && actrizPrincipal.length() == 0) {
             throw new Exception("Los nombres del actor principal y la actriz principal no pueden estar vacios");
-        } else{
+        } else {
             this.actorPrincipal = actorPrincipal;
             this.actrizPrincipal = actrizPrincipal;
         }
-        
+
     }
 
     public String getActorPrincipal() {
@@ -37,9 +40,9 @@ public class Pelicula extends Multimedia{
     public void setActrizPrincipal(String actrizPrincipal) {
         this.actrizPrincipal = actrizPrincipal;
     }
-    
+
     @Override
-    public String toString(){
-        return super.toString()+"\nActor Principal: "+actorPrincipal+"\nActriz Principal: "+actrizPrincipal;
+    public String toString() {
+        return super.toString() + "\nActor Principal: " + actorPrincipal + "\nActriz Principal: " + actrizPrincipal;
     }
 }

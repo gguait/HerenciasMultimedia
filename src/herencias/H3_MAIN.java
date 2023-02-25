@@ -12,10 +12,12 @@ import java.util.Scanner;
  * @author pabmar
  */
 public class H3_MAIN {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Que quieres agregar");
 
+        Multimedia nueva = null;
         int eleccion = -1;
         int formatoEleccion = -1;
         System.out.println("1. Pelicula\n2. Disco\n3. Salir");
@@ -72,10 +74,19 @@ public class H3_MAIN {
 
                 // public Pelicula(String titulo, String autor, format formato, String duracion,
                 // String actorPrincipal, String actrizPrincipal)
-
+                nueva = new Pelicula(titulo, autor, formato, duracion, actorPrincipal, actrizPrincipal);
             case 2:
                 // public Disco(String titulo, String autor, format formato, String duracion,
                 // String genero)
+                String titulo, autor, duracion, genero;
+                format formato = null;
+
+                System.out.println("Titulo: ");
+                titulo = teclado.nextLine();
+
+                System.out.println("Autor: ");
+                autor = teclado.nextLine();
+
         }
     }
 }
