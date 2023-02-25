@@ -1,18 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package herencias;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author pabmar
- */
 public class Multimedia {
-    
-    public enum format{
+
+    public enum format {
         wav, mp3, midi, avi, mov, mpg, cdAudio, dvd
     }
 
@@ -66,27 +58,25 @@ public class Multimedia {
         return "Titulo: " + titulo + "\nAutor: " + autor + "\nFormato: " + formato + "\nDuracion: " + duracion;
     }
 
-//    public boolean equals(String titulo, String autor) {
-//        boolean primero = false;
-//        boolean devolver = false;
-//        for (String titulo1 : titulos) {
-//            if (titulo == titulo1) {
-//                primero = true;
-//            }
-//            if (primero) {
-//                for (String autor1 : autores) {
-//                    if (autor == autor1) {
-//                        devolver = true;
-//                    } else {
-//                        devolver = false;
-//                    }
-//                }
-//            }
-//        }
-//        return devolver;
-//    }
-    
-    
+    // public boolean equals(String titulo, String autor) {
+    // boolean primero = false;
+    // boolean devolver = false;
+    // for (String titulo1 : titulos) {
+    // if (titulo == titulo1) {
+    // primero = true;
+    // }
+    // if (primero) {
+    // for (String autor1 : autores) {
+    // if (autor == autor1) {
+    // devolver = true;
+    // } else {
+    // devolver = false;
+    // }
+    // }
+    // }
+    // }
+    // return devolver;
+    // }
 
     public boolean equals(Multimedia m) {
         boolean devolver = false;
@@ -96,8 +86,8 @@ public class Multimedia {
         return devolver;
     }
 
-//    public static void main(String[] args) {
-//        Multimedia prueba = new Multimedia("titulo", "autor", "formato", "duracion");
-//        prueba.multimediaToString();
-//    }
+    // public static void main(String[] args) {
+    // Multimedia prueba = new Multimedia("titulo", "autor", "formato", "duracion");
+    // prueba.multimediaToString();
+    // }
 }

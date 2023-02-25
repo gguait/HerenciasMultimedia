@@ -9,32 +9,33 @@ package herencias;
  * @author pabmar
  */
 public class ListaMultimedia {
+    ListaMultimedia listamultimedia = new ListaMultimedia(10);
     private Multimedia[] lista;
     private int total = 0;
 
     public ListaMultimedia(int x) {
         lista = new Multimedia[x];
     }
-    
-    public int size(){
+
+    public int size() {
         return total;
     }
-    
-    public boolean add (Multimedia x){
+
+    public boolean add(Multimedia x) {
         if (total < lista.length) {
             lista[total] = x;
             total++;
             return true;
-        } else{
+        } else {
             return false;
         }
     }
-    
-    public Multimedia get(int posicion){
+
+    public Multimedia get(int posicion) {
         return lista[posicion];
     }
-    
-    public int indexOf(Multimedia m){
+
+    public int indexOf(Multimedia m) {
         for (int i = 0; i < total; i++) {
             if (lista[i].equals(m)) {
                 return i;
@@ -42,13 +43,13 @@ public class ListaMultimedia {
         }
         return -1;
     }
-    
+
     @Override
-    public String toString(){
+    public String toString() {
         String resultado = "";
-        
+
         for (int i = 0; i < this.size(); i++) {
-            resultado = resultado + "\nMultimedia [" + i + "]: \n "+this.get(i).toString()+"\n";
+            resultado = resultado + "\nMultimedia [" + i + "]: \n " + this.get(i).toString() + "\n";
         }
         return resultado;
     }
