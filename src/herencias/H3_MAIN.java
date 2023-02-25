@@ -17,29 +17,31 @@ public class H3_MAIN {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Que quieres agregar");
-        
+
         int eleccion = -1;
         int formatoEleccion = -1;
         System.out.println("1. Pelicula\n2. Disco\n3. Salir");
         eleccion = teclado.nextInt();
-//        String titulo, String autor, format formato, String duracion, String actorPrincipal, String actrizPrincipal)
-        switch(eleccion){
+        // String titulo, String autor, format formato, String duracion, String
+        // actorPrincipal, String actrizPrincipal)
+        switch (eleccion) {
             case 1:
                 String titulo, autor, duracion, actorPrincipal, actrizPrincipal;
                 format formato = null;
                 teclado.nextLine();
-                
+
                 System.out.println("Titulo: ");
                 titulo = teclado.nextLine();
-                
+
                 System.out.println("Autor: ");
                 autor = teclado.nextLine();
-                
-                System.out.println("Formato:\n1. Wav,\n2. mp3,\n3. midi,\n4. avi,\n5. mov,\n6. mpg,\n7. cdAudio,\n8. dvd");
+
+                System.out.println(
+                        "Formato:\n1. Wav,\n2. mp3,\n3. midi,\n4. avi,\n5. mov,\n6. mpg,\n7. cdAudio,\n8. dvd");
                 formatoEleccion = teclado.nextInt();
-                
-//                wav, mp3, midi, avi, mov, mpg, cdAudio, dvd
-                switch(formatoEleccion){
+
+                // wav, mp3, midi, avi, mov, mpg, cdAudio, dvd
+                switch (formatoEleccion) {
                     case 1:
                         formato = format.wav;
                     case 2:
@@ -57,17 +59,17 @@ public class H3_MAIN {
                     case 8:
                         formato = format.dvd;
                 }
-                
+
                 teclado.nextLine();
                 System.out.println("Duracion: ");
                 duracion = teclado.nextLine();
-                
+
                 System.out.println("Actor Principal: ");
                 actorPrincipal = teclado.nextLine();
-                
+
                 System.out.println("Actriz Principal: ");
                 actrizPrincipal = teclado.nextLine();
-                
+
                 try {
                     Pelicula nueva = new Pelicula(titulo, autor, formato, duracion, actorPrincipal, actrizPrincipal);
                 } catch (Exception e) {
@@ -75,11 +77,13 @@ public class H3_MAIN {
                 }
 
                 System.out.println();
-                
-//                public Pelicula(String titulo, String autor, format formato, String duracion, String actorPrincipal, String actrizPrincipal)
-                
+
+                // public Pelicula(String titulo, String autor, format formato, String duracion,
+                // String actorPrincipal, String actrizPrincipal)
+
             case 2:
-//                public Disco(String titulo, String autor, format formato, String duracion, String genero)
+                // public Disco(String titulo, String autor, format formato, String duracion,
+                // String genero)
         }
     }
 }
