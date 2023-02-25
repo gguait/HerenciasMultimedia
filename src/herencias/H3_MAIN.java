@@ -6,8 +6,6 @@ package herencias;
 
 import herencias.Multimedia.format;
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -69,12 +67,6 @@ public class H3_MAIN {
 
                 System.out.println("Actriz Principal: ");
                 actrizPrincipal = teclado.nextLine();
-
-                try {
-                    Pelicula nueva = new Pelicula(titulo, autor, formato, duracion, actorPrincipal, actrizPrincipal);
-                } catch (Exception e) {
-                    System.out.println(e.getMessage());
-                }
 
                 System.out.println();
 
