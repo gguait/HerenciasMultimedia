@@ -38,10 +38,17 @@ public class PolimorfismoMultimedia {
 //        }
 //        System.out.println(tiempoTotal);
 
-        int tiempoTotal = 0;
+        int contadorSinActriz = 0;
+        
         for (int i = 0; i < listamultimedia.size(); i++) {
-            tiempoTotal += Integer.valueOf(listamultimedia.get(i).getDuracion());
+            if (listamultimedia.get(i) instanceof Pelicula) {
+                if (((Pelicula)(listamultimedia.get(i))).getActrizPrincipal().equals("")) {
+                    contadorSinActriz++;
+                }
+            }
         }
-        System.out.println(tiempoTotal);
+        
+        System.out.println(contadorSinActriz);
+
     }
 }
