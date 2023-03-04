@@ -1,9 +1,6 @@
-package herencias;
+package Multimedia;
 
 public class Disco extends Multimedia {
-    public enum genero {
-        rock, pop, punk
-    }
 
     private genero genero;
 

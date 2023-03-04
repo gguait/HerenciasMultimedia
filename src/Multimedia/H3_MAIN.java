@@ -1,7 +1,7 @@
-package herencias;
+package Multimedia;
 
-import herencias.Multimedia.format;
-import herencias.Disco.genero;
+import Multimedia.Multimedia.format;
+import Multimedia.Multimedia.genero;
 import java.util.Scanner;
 
 public class H3_MAIN {

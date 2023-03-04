@@ -1,4 +1,4 @@
-package herencias;
+package Multimedia;
 
 public class Pelicula extends Multimedia {
     private String actorPrincipal, actrizPrincipal;
