@@ -2,14 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package herencias;
+package Multimedia;
 
 /**
  *
  * @author pabmar
  */
 public class ListaMultimedia {
-    ListaMultimedia listamultimedia = new ListaMultimedia(10);
     private Multimedia[] lista;
     private int total = 0;
 
@@ -49,7 +48,7 @@ public class ListaMultimedia {
         String resultado = "";
 
         for (int i = 0; i < this.size(); i++) {
-            resultado = resultado + "\nMultimedia [" + i + "]: \n " + this.get(i).toString() + "\n";
+            resultado = resultado + "\nMultimedia [" + i + "]: \n" + this.get(i).toString() + "\n";
         }
         return resultado;
     }

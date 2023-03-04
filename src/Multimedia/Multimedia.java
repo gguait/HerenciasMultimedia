@@ -1,4 +1,4 @@
-package herencias;
+package Multimedia;
 
 import java.util.ArrayList;
 
@@ -8,9 +8,14 @@ public class Multimedia {
         wav, mp3, midi, avi, mov, mpg, cdAudio, dvd
     }
 
+    public enum genero {
+        rock, pop, punk, hiphop, rap
+    }
+
     public String titulo;
     public String autor;
     public format formato;
+    public genero genero;
     public String duracion;
     ArrayList<String> titulos;
     ArrayList<String> autores;
@@ -38,6 +43,9 @@ public class Multimedia {
         return duracion;
     }
 
+    public genero getGenero(){
+        return genero;
+    }
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
@@ -54,10 +62,17 @@ public class Multimedia {
         this.duracion = duracion;
     }
 
-    public String multimediaToString() {
-        return "Titulo: " + titulo + "\nAutor: " + autor + "\nFormato: " + formato + "\nDuracion: " + duracion;
+//    public String multimediaToString() {
+//        return "Titulo: " + titulo + "\nAutor: " + autor + "\nFormato: " + formato + "\nDuracion: " + duracion;
+//    }
+
+    @Override
+    public String toString() {
+        return "Titulo=" + titulo + ", autor=" + autor + ", formato=" + formato + ", duracion=" + duracion;
     }
 
+    
+    
     // public boolean equals(String titulo, String autor) {
     // boolean primero = false;
     // boolean devolver = false;
